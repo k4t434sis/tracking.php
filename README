@@ -12,6 +12,10 @@ Usage
 
 	$raw_query      = $_SESSION['keywords']; 
     $key_browser    = getKeywords($raw_query);
-    $keywords       = $key_browser['keywords'];
-    $referer        = $key_browser['referer'];
+    $keywords       = $key_browser['keywords']; // Contains the keywords the user used to hit your site
+    $referer        = $key_browser['referer']; //  Contains the referring Search engine or Direct Traffic
+
+    $user_agent     = getBrowserOs($_SERVER['HTTP_USER_AGENT']);
+    $br             = $user_agent['browser']; // Contains the user's browser and version
+    $os             = $user_agent['os'];     //  Contains the user's operating system
 ?>
