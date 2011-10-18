@@ -1,0 +1,17 @@
+Usage
+
+<?php
+	session_start
+	require_once 'tracking.php';
+
+	// On your homepage add the next 3 lines:
+	if(!isset($_SESSION['keywords']))
+	{
+		$_SESSION['keywords'] = $SERVER['HTTP_REFERER']
+	}
+
+	$raw_query      = $_SESSION['keywords']; 
+    $key_browser    = getKeywords($raw_query);
+    $keywords       = $key_browser['keywords'];
+    $referer        = $key_browser['referer'];
+?>
