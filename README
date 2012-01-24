@@ -10,7 +10,7 @@ the search parameters for these users. http://www.wired.com/threatlevel/2011/10/
 	// On your homepage add the next 3 lines:
 	if(!isset($_SESSION['keywords']))
 	{
-		$_SESSION['keywords'] = $SERVER['HTTP_REFERER']
+		$_SESSION['keywords'] = $SERVER['HTTP_REFERER'];
 	}
 
 	$raw_query      = $_SESSION['keywords']; 
