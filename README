@@ -4,7 +4,7 @@ Note: As Google will be encrypting search queries for logged in users this scrip
 the search parameters for these users. http://www.wired.com/threatlevel/2011/10/google-search-https/
 
 <?php
-	session_start
+	session_start();
 	require_once 'tracking.php';
 
 	// On your homepage add the next 3 lines:
